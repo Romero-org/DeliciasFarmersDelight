@@ -77,8 +77,15 @@ repositories {
 }
 
 dependencies {
+    val mappingsAttribute = Attribute.of("net.minecraft.mappings", String::class.java)
     minecraft("com.mojang:minecraft:${property("deps.minecraft")}")
     implementation("net.fabricmc:fabric-loader:${property("deps.fabric-loader")}")
+    api("dev.yumi.mc.core:yumi-mc-foundation:${property("deps.yumi_mc_foundation")}") {
+        attributes {
+            attribute(mappingsAttribute, "mojmap")
+        }
+    }
+    include("dev.yumi.mc.core:yumi-mc-foundation:${property("deps.yumi_mc_foundation")}")
 
     implementation("net.fabricmc.fabric-api:fabric-api:${property("deps.fabric_api")}")
     implementation("folk.sisby:kaleido-config:${property("deps.kaleido")}")

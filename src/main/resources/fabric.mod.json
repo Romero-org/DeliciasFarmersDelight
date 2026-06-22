@@ -13,11 +13,11 @@
   "license": "MIT",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "org.romero.delicias.fabric.FabricEntrypoint"
+    "yumi:init": [
+      "org.romero.delicias.DeliciasFD"
     ],
-    "client": [
-      "org.romero.delicias.fabric.FabricClientEntrypoint"
+    "yumi:client": [
+      "org.romero.delicias.client.DeliciasFDClient"
     ],
     "fabric-datagen": [
       "org.romero.delicias.fabric.datagen.FabricDataGeneratorEntrypoint"

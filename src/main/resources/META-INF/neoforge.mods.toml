@@ -37,3 +37,7 @@ modId = "brewinandchewin"
 type = "required"
 side = "BOTH"
 versionRange = "[${bnc},)"
+
+[modproperties.delicias_farmersdelight."yumi:entrypoints"]
+"yumi:init" = ["org.romero.delicias.DeliciasFD"]
+"yumi:client_init" = ["org.romero.delicias.client.DeliciasFDClient"]

@@ -65,7 +65,7 @@ repositories {
     }
 }
 
-val localRuntime by configurations.creating
+val localRuntime = configurations.create("localRuntime")
 
 configurations {
     runtimeClasspath {
@@ -103,6 +103,13 @@ neoForge {
 }
 
 dependencies {
+    val mappingsAttribute = Attribute.of("net.minecraft.mappings", String::class.java)
+    api("dev.yumi.mc.core:yumi-mc-foundation:${property("deps.yumi_mc_foundation")}") {
+        attributes {
+            attribute(mappingsAttribute, "mojmap")
+        }
+    }
+    jarJar("dev.yumi.mc.core:yumi-mc-foundation:${property("deps.yumi_mc_foundation")}")
     // Kaleido
     implementation("folk.sisby:kaleido-config:${property("deps.kaleido")}")
     jarJar("folk.sisby:kaleido-config:${property("deps.kaleido")}")

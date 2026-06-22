@@ -79,6 +79,7 @@ repositories {
 }
 
 dependencies {
+    val mappingsAttribute = Attribute.of("net.minecraft.mappings", String::class.java)
     minecraft("com.mojang:minecraft:${property("deps.minecraft")}")
     mappings(loom.layered {
         officialMojangMappings()
@@ -86,6 +87,13 @@ dependencies {
             parchment("org.parchmentmc.data:parchment-${property("deps.parchment")}@zip")
     })
     modImplementation("net.fabricmc:fabric-loader:${property("deps.fabric-loader")}")
+    api("dev.yumi.mc.core:yumi-mc-foundation:${property("deps.yumi_mc_foundation")}") {
+        attributes {
+            attribute(mappingsAttribute, "mojmap")
+        }
+    }
+    include("dev.yumi.mc.core:yumi-mc-foundation:${property("deps.yumi_mc_foundation")}")
+
     implementation("folk.sisby:kaleido-config:${property("deps.kaleido")}")
     include("folk.sisby:kaleido-config:${property("deps.kaleido")}")
 
