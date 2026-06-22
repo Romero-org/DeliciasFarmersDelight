@@ -1,0 +1,39 @@
+modLoader = "javafml"
+loaderVersion = "[2,)"
+license = "MIT"
+
+[[mods]]
+modId = "delicias_farmersdelight"
+displayName = "Delicias Farmer's Delight"
+version = "${version}"
+displayURL = ""
+logoFile = "assets/icon.png"
+authors = "pau_1eal, macuguita"
+description = '''Spanish food addon for Farmer's Delight'''
+
+[[mixins]]
+config = "delicias_farmersdelight.mixins.json"
+
+[[dependencies.delicias_farmersdelight]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.181,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.delicias_farmersdelight]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft}"
+
+[[dependencies.delicias_farmersdelight]]
+modId = "farmersdelight"
+type = "required"
+side = "BOTH"
+versionRange = "[${fd},)"
+
+[[dependencies.delicias_farmersdelight]]
+modId = "brewinandchewin"
+type = "required"
+side = "BOTH"
+versionRange = "[${bnc},)"

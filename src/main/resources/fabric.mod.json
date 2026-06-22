@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "delicias_farmersdelight",
+  "name": "Delicias Farmer's Delight",
+  "version": "${version}",
+  "authors": ["pau_1eal", "macuguita"],
+  "contact": {
+    "sources": "",
+    "issues": ""
+  },
+  "description": "Spanish food addon for Farmer's Delight",
+  "icon": "assets/icon.png",
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "org.romero.delicias.fabric.FabricEntrypoint"
+    ],
+    "client": [
+      "org.romero.delicias.fabric.FabricClientEntrypoint"
+    ],
+    "fabric-datagen": [
+      "org.romero.delicias.fabric.datagen.FabricDataGeneratorEntrypoint"
+    ]
+  },
+  "mixins": [
+    "delicias_farmersdelight.mixins.json"
+  ],
+  "accessWidener": "delicias_farmersdelight.classtweaker",
+  "depends": {
+    "fabricloader": ">=0.19.0",
+    "fabric-api": "*",
+    "farmersdelight": ">=${fd}",
+    "brewinandchewin": ">=${bnc}"
+  }
+}
