@@ -9,6 +9,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import org.romero.delicias.common.reg.DeliciasBlocks;
+import org.romero.delicias.common.reg.DeliciasItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,6 +27,7 @@ public class DeliciasFD implements ModInitializer {
     public void onInitialize(ModContainer mod) {
         LOG.info("Initializing {} on {}", MOD_ID, Platform.INSTANCE.loader());
 
-        Registry.register(BuiltInRegistries.ITEM, id("test"), new Item(new Item.Properties()));
+        DeliciasBlocks.init();
+        DeliciasItems.init();
     }
 }

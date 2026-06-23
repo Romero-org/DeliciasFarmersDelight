@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "delicias_farmersdelight:block/garlics_stage0"
+    },
+    "age=1": {
+      "model": "delicias_farmersdelight:block/garlics_stage0"
+    },
+    "age=2": {
+      "model": "delicias_farmersdelight:block/garlics_stage1"
+    },
+    "age=3": {
+      "model": "delicias_farmersdelight:block/garlics_stage1"
+    },
+    "age=4": {
+      "model": "delicias_farmersdelight:block/garlics_stage2"
+    },
+    "age=5": {
+      "model": "delicias_farmersdelight:block/garlics_stage2"
+    },
+    "age=6": {
+      "model": "delicias_farmersdelight:block/garlics_stage2"
+    },
+    "age=7": {
+      "model": "delicias_farmersdelight:block/garlics_stage3"
+    }
+  }
+}

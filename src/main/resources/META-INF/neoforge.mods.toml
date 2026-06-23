@@ -8,7 +8,7 @@ displayName = "Delicias Farmer's Delight"
 version = "${version}"
 displayURL = ""
 logoFile = "assets/icon.png"
-authors = "pau_1eal, macuguita"
+authors = ["pau_1eal", "macuguita"]
 description = '''Spanish food addon for Farmer's Delight'''
 
 [[mixins]]

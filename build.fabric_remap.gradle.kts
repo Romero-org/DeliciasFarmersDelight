@@ -149,6 +149,7 @@ loom.runs.named("server") {
 fabricApi {
     configureDataGeneration {
         outputDirectory = file("$rootDir/src/main/generated")
+        modId = "delicias_farmersdelight"
         client = true
     }
 }

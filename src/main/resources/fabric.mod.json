@@ -16,7 +16,7 @@
     "yumi:init": [
       "org.romero.delicias.DeliciasFD"
     ],
-    "yumi:client": [
+    "yumi:client_init": [
       "org.romero.delicias.client.DeliciasFDClient"
     ],
     "fabric-datagen": [
