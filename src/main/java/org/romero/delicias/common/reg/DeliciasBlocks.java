@@ -33,15 +33,17 @@ public final class DeliciasBlocks {
             TallGrassBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.FERN).offsetType(BlockBehaviour.OffsetType.XZ));
 
     public static final Block POTTED_ROSEMARY = register(DeliciasBlockIds.POTTED_ROSEMARY,
-            (props) -> new FlowerPotBlock(ROSEMARY, props),
-            BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY));
+            (props) -> new FlowerPotBlock(ROSEMARY, props), flowerPotProperties());
 
     public static final Block ROSE = register(DeliciasBlockItemIds.ROSE,
             (props) -> new FlowerBlock(MobEffects.DAMAGE_BOOST, 30, props), BlockBehaviour.Properties.ofFullCopy(Blocks.FERN).offsetType(BlockBehaviour.OffsetType.XZ));
 
     public static final Block POTTED_ROSE = register(DeliciasBlockIds.POTTED_ROSE,
-            (props) -> new FlowerPotBlock(ROSE, props),
-            BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY));
+            (props) -> new FlowerPotBlock(ROSE, props), flowerPotProperties());
+
+    private static BlockBehaviour.Properties flowerPotProperties() {
+        return BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY);
+    }
 
     private static Block register(final BlockItemId id, final Function<BlockBehaviour.Properties, Block> factory, final BlockBehaviour.Properties properties) {
         return register(id.block(), factory, properties);
