@@ -54,6 +54,7 @@ repositories {
         Triple("Modrinth", "https://api.modrinth.com/maven", listOf("maven.modrinth")),
         Triple("Greenhouse", "https://maven.greenhouse.lgbt/releases/", listOf("vectorwing", "umpaz.brewinandchewin", "house.greenhouse")),
         Triple("Jitpack", "https://jitpack.io", listOf()),
+        Triple("Appleskin", "https://maven.ryanliptak.com/", listOf("squeek.appleskin")),
     )
 
     exclusiveRepos.forEach { (name, url, groups) ->
@@ -103,6 +104,14 @@ dependencies {
     modImplementation("vectorwing:FarmersDelight:${property("deps.fd")}+refabricated")
     modImplementation("umpaz.brewinandchewin:BrewinAndChewin-fabric:${property("deps.bnc")}")
 
+    if (hasProperty("deps.appleskin")) {
+        modLocalRuntime("squeek.appleskin:appleskin-fabric:${property("deps.appleskin")}")
+    }
+
+    if (hasProperty("deps.cloth_config")) {
+        modLocalRuntime("maven.modrinth:cloth-config:${property("deps.cloth_config")}")
+    }
+
     if (hasProperty("deps.mcqoy")) {
         modLocalRuntime("maven.modrinth:mcqoy:${property("deps.mcqoy")}")
     }
@@ -131,7 +140,7 @@ stonecutter {
 
 tasks {
     processResources {
-        exclude("**/neoforge.mods.toml", "**/mods.toml")
+        exclude("**/neoforge.mods.toml", "**/mods.toml", "**/loot_modifiers/**")
     }
 
     register<Copy>("buildAndCollect") {

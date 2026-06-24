@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
-import org.romero.delicias.common.blocks.GarlicBlock;
+import org.romero.delicias.common.block.GarlicBlock;
 import org.romero.delicias.common.reg.ids.DeliciasBlockIds;
 import org.romero.delicias.common.reg.ids.DeliciasBlockItemIds;
 import org.romero.delicias.common.util.BlockItemId;

@@ -5,8 +5,11 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import org.romero.delicias.common.item.OilBottleItem;
 import org.romero.delicias.common.reg.ids.DeliciasBlockItemIds;
+import org.romero.delicias.common.reg.ids.DeliciasItemIds;
 import org.romero.delicias.common.util.BlockItemId;
 
 import java.util.function.BiFunction;
@@ -20,6 +23,14 @@ public final class DeliciasItems {
     public static Item WILD_GARLIC = registerBlock(DeliciasBlockItemIds.WILD_GARLIC, DeliciasBlocks.WILD_GARLIC);
 
     public static Item GARLIC = registerItem(DeliciasBlockItemIds.GARLIC_CROP, createBlockItemWithCustomItemName(DeliciasBlocks.GARLIC), new Item.Properties().food(DeliciasFoodProperties.GARLIC));
+
+    public static Item OLIVES = registerItem(DeliciasItemIds.OLIVES, new Item.Properties().food(DeliciasFoodProperties.OLIVES));
+
+    public static Item OIL_BOTTLE = registerItem(DeliciasItemIds.OIL_BOTTLE, OilBottleItem::new, new Item.Properties().food(DeliciasFoodProperties.OIL_BOTTLE).craftRemainder(Items.GLASS_BOTTLE).stacksTo(16));
+
+    public static Item CALAMARI = registerItem(DeliciasItemIds.CALAMARI, new Item.Properties().food(DeliciasFoodProperties.CALAMARI));
+
+    public static Item RAISINS = registerItem(DeliciasItemIds.RAISINS, new Item.Properties().food(DeliciasFoodProperties.RAISINS));
 
     public static Item ROSEMARY = registerBlock(DeliciasBlockItemIds.ROSEMARY, DeliciasBlocks.ROSEMARY);
 

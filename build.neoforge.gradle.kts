@@ -41,6 +41,7 @@ repositories {
         Triple("Terraformers (Mod Menu)", "https://maven.terraformersmc.com/releases/", listOf("com.terraformersmc", "dev.emi")),
         Triple("Modrinth", "https://api.modrinth.com/maven", listOf("maven.modrinth")),
         Triple("Greenhouse", "https://maven.greenhouse.lgbt/releases/", listOf("vectorwing", "umpaz.brewinandchewin", "house.greenhouse")),
+        Triple("Appleskin", "https://maven.ryanliptak.com/", listOf("squeek.appleskin")),
     )
 
     exclusiveRepos.forEach { (name, url, groups) ->
@@ -117,6 +118,14 @@ dependencies {
 
     implementation("maven.modrinth:farmers-delight:${property("deps.fd")}")
     implementation("umpaz.brewinandchewin:BrewinAndChewin-neoforge:${property("deps.bnc")}") { isTransitive = false }
+
+    if (hasProperty("deps.appleskin")) {
+        localRuntime("squeek.appleskin:appleskin-neoforge:${property("deps.appleskin")}")
+    }
+
+    if (hasProperty("deps.cloth_config")) {
+        localRuntime("maven.modrinth:cloth-config:${property("deps.cloth_config")}")
+    }
     //McQoy
 //    if (hasProperty("deps.mcqoy")) {
 //        localRuntime("maven.modrinth:mcqoy:${property("deps.mcqoy")}")

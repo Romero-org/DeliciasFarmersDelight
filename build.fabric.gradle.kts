@@ -52,6 +52,7 @@ repositories {
         Triple("Terraformers (Mod Menu)", "https://maven.terraformersmc.com/releases/", listOf("com.terraformersmc", "dev.emi")),
         Triple("Modrinth", "https://api.modrinth.com/maven", listOf("maven.modrinth")),
         Triple("Greenhouse", "https://maven.greenhouse.lgbt/releases/", listOf("vectorwing", "umpaz.brewinandchewin", "house.greenhouse")),
+        Triple("Appleskin", "https://maven.ryanliptak.com/", listOf("squeek.appleskin")),
     )
 
     exclusiveRepos.forEach { (name, url, groups) ->
@@ -94,6 +95,14 @@ dependencies {
 
     implementation("vectorwing:FarmersDelight:${property("deps.fd")}+refabricated")
 
+    if (hasProperty("deps.appleskin")) {
+        localRuntime("squeek.appleskin:appleskin-fabric:${property("deps.appleskin")}")
+    }
+
+    if (hasProperty("deps.cloth_config")) {
+        localRuntime("maven.modrinth:cloth-config:${property("deps.cloth_config")}")
+    }
+
 //    if (hasProperty("deps.mcqoy")) {
 //        localRuntime("maven.modrinth:mcqoy:${property("deps.mcqoy")}")
 //    }
@@ -123,7 +132,7 @@ stonecutter {
 
 tasks {
     processResources {
-        exclude("**/neoforge.mods.toml", "**/mods.toml")
+        exclude("**/neoforge.mods.toml", "**/mods.toml", "**/loot_modifiers/**")
     }
 
     register<Copy>("buildAndCollect") {
