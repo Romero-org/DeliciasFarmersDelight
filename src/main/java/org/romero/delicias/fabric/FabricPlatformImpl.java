@@ -36,5 +36,9 @@ public class FabricPlatformImpl implements Platform {
         BlockRenderLayerMap.INSTANCE.putBlocks(renderType, blocks);
     }
 
+    @Override
+    public void registerCreativeModeTabs(Runnable runnable) {
+        runnable.run();
+    }
 }
 //?}

@@ -32,6 +32,44 @@ public final class DeliciasItems {
 
     public static Item RAISINS = registerItem(DeliciasItemIds.RAISINS, new Item.Properties().food(DeliciasFoodProperties.RAISINS));
 
+    public static Item RAISIN_BREAD = registerItem(DeliciasItemIds.RAISIN_BREAD);
+
+    public static Item GARLIC_BREAD = registerItem(DeliciasItemIds.GARLIC_BREAD);
+
+    public static Item ALIOLI = registerItem(DeliciasItemIds.ALIOLI);
+
+    public static Item CHORIZO = registerItem(DeliciasItemIds.CHORIZO);
+
+    public static Item MORZILLA = registerItem(DeliciasItemIds.MORZILLA);
+
+    public static Item CROQUETTE = registerItem(DeliciasItemIds.CROQUETTE);
+
+    public static Item POTATO_TORTILLA = registerItem(DeliciasItemIds.POTATO_TORTILLA);
+
+    public static Item POTATO_TORTILLA_SLICE = registerItem(DeliciasItemIds.POTATO_TORTILLA_SLICE);
+
+    public static Item CHORIZO_TORTILLA = registerItem(DeliciasItemIds.CHORIZO_TORTILLA);
+
+    public static Item CHORIZO_TORTILLA_SLICE = registerItem(DeliciasItemIds.CHORIZO_TORTILLA_SLICE);
+
+    public static Item CHIPIRONES = registerItem(DeliciasItemIds.CHIPIRONES);
+
+    public static Item FIDEUA = registerItem(DeliciasItemIds.FIDEUA);
+
+    public static Item BLACK_RICE = registerItem(DeliciasItemIds.BLACK_RICE);
+
+    public static Item GAZPACHO = registerItem(DeliciasItemIds.GAZPACHO);
+
+    public static Item PAELLA = registerItem(DeliciasItemIds.PAELLA);
+
+    public static Item BRAVA_POTATOES = registerItem(DeliciasItemIds.BRAVA_POTATOES);
+
+    public static Item GRAPE_JUICE = registerItem(DeliciasItemIds.GRAPE_JUICE);
+
+    public static Item SANGRIA = registerItem(DeliciasItemIds.SANGRIA);
+
+    public static Item GRAPE_JAM = registerItem(DeliciasItemIds.GRAPE_JAM);
+
     public static Item ROSEMARY = registerBlock(DeliciasBlockItemIds.ROSEMARY, DeliciasBlocks.ROSEMARY);
 
     public static Item ROSE = registerBlock(DeliciasBlockItemIds.ROSE, DeliciasBlocks.ROSE);

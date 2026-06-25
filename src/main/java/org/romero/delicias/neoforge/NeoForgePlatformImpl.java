@@ -3,10 +3,12 @@ package org.romero.delicias.neoforge;
 //? neoforge {
 /*import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.registries.RegisterEvent;
 import org.jspecify.annotations.Nullable;
 import org.romero.delicias.Platform;
 import net.neoforged.fml.ModList;
@@ -49,6 +51,15 @@ public record NeoForgePlatformImpl(List<Consumer<IEventBus>> lateActions) implem
         addLateAction(bus -> bus.addListener(FMLClientSetupEvent.class, e -> {
             for (Block block : blocks) {
                 ItemBlockRenderTypes.setRenderLayer(block, renderType);
+            }
+        }));
+    }
+
+    @Override
+    public void registerCreativeModeTabs(Runnable runnable) {
+        addLateAction(bus -> bus.addListener(RegisterEvent.class, e -> {
+            if (e.getRegistryKey().equals(Registries.CREATIVE_MODE_TAB)) {
+                runnable.run();
             }
         }));
     }

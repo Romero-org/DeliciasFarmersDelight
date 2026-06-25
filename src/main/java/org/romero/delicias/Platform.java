@@ -28,5 +28,6 @@ public interface Platform {
     boolean isDevelopment();
 
     void registerRenderType(RenderType renderType, Block... blocks);
+    void registerCreativeModeTabs(Runnable runnable);
 
 }

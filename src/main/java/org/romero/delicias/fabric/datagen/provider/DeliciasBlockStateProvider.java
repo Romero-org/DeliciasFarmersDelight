@@ -37,6 +37,25 @@ public final class DeliciasBlockStateProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(DeliciasItems.OIL_BOTTLE, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(DeliciasItems.CALAMARI, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(DeliciasItems.RAISINS, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.RAISIN_BREAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.GARLIC_BREAD, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.ALIOLI, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.CHORIZO, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.MORZILLA, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.CROQUETTE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.POTATO_TORTILLA, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.POTATO_TORTILLA_SLICE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.CHORIZO_TORTILLA, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.CHORIZO_TORTILLA_SLICE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.CHIPIRONES, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.FIDEUA, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.BLACK_RICE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.GAZPACHO, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.PAELLA, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.BRAVA_POTATOES, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.GRAPE_JUICE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.SANGRIA, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.GRAPE_JAM, ModelTemplates.FLAT_ITEM);
     }
 
     private static void generateLonelyFlowerPot(BlockModelGenerators blockStateModelGenerator, Block block, ResourceLocation textureId) {
