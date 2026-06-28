@@ -41,7 +41,7 @@ public final class DeliciasBlockStateProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(DeliciasItems.GARLIC_BREAD, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(DeliciasItems.ALIOLI, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(DeliciasItems.CHORIZO, ModelTemplates.FLAT_ITEM);
-        itemModelGenerator.generateFlatItem(DeliciasItems.MORZILLA, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(DeliciasItems.MORCILLA, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(DeliciasItems.CROQUETTE, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(DeliciasItems.POTATO_TORTILLA, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(DeliciasItems.POTATO_TORTILLA_SLICE, ModelTemplates.FLAT_ITEM);

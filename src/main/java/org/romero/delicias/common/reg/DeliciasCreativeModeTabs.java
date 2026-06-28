@@ -31,7 +31,7 @@ public final class DeliciasCreativeModeTabs {
             output.accept(DeliciasItems.GARLIC_BREAD);
             output.accept(DeliciasItems.ALIOLI);
             output.accept(DeliciasItems.CHORIZO);
-            output.accept(DeliciasItems.MORZILLA);
+            output.accept(DeliciasItems.MORCILLA);
             output.accept(DeliciasItems.CROQUETTE);
             output.accept(DeliciasItems.POTATO_TORTILLA);
             output.accept(DeliciasItems.POTATO_TORTILLA_SLICE);

@@ -23,7 +23,7 @@ public final class DeliciasItemIds {
 
     public static final ResourceKey<Item> CHORIZO = create("chorizo");
 
-    public static final ResourceKey<Item> MORZILLA = create("morzilla");
+    public static final ResourceKey<Item> MORCILLA = create("morcilla");
 
     public static final ResourceKey<Item> CROQUETTE = create("croquette");
 
